@@ -78,7 +78,6 @@ spec:
   - type: Generic
     generic:
       secret: this-is-a-secret
-
 ---
 apiVersion: image.openshift.io/v1
 kind: ImageStream
