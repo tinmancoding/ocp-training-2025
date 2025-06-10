@@ -1,0 +1,57 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "github:NixOS/nixpkgs/nixpkgs-unstable": {
+      "last_modified": "2025-06-08T16:50:33Z",
+      "resolved": "github:NixOS/nixpkgs/08fcb0dcb59df0344652b38ea6326a2d8271baff?lastModified=1749401433"
+    },
+    "openshift@latest": {
+      "last_modified": "2025-05-16T20:19:48Z",
+      "resolved": "github:NixOS/nixpkgs/12a55407652e04dcf2309436eb06fef0d3713ef3#openshift",
+      "source": "devbox-search",
+      "version": "4.16.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/jznnib7y38v5fy69p6xnpnvnks664xgq-openshift-4.16.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/jznnib7y38v5fy69p6xnpnvnks664xgq-openshift-4.16.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/rqn7n8mhn79f5np4z5hj2jagy6x53ijw-openshift-4.16.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/rqn7n8mhn79f5np4z5hj2jagy6x53ijw-openshift-4.16.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/gw4ki0w6via0vj3578cinibj1w2iqq8i-openshift-4.16.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/gw4ki0w6via0vj3578cinibj1w2iqq8i-openshift-4.16.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/rmd36xgdz4vgd8w6x8mcx2pig7c3aafq-openshift-4.16.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/rmd36xgdz4vgd8w6x8mcx2pig7c3aafq-openshift-4.16.0"
+        }
+      }
+    }
+  }
+}
