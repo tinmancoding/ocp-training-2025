@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  annotations:
+    toolchain.dev.openshift.com/last-applied-configuration: '{"apiVersion":"networking.k8s.io/v1","kind":"NetworkPolicy","metadata":{"labels":{"toolchain.dev.openshift.com/provider":"codeready-toolchain","toolchain.dev.openshift.com/space":"landrasi"},"name":"allow-same-namespace","namespace":"landrasi-dev"},"spec":{"ingress":[{"from":[{"podSelector":{}}]}],"podSelector":{}}}'
+  creationTimestamp: "2025-06-05T18:55:41Z"
+  generation: 1
+  labels:
+    toolchain.dev.openshift.com/provider: codeready-toolchain
+    toolchain.dev.openshift.com/space: landrasi
+  name: allow-same-namespace
+  namespace: landrasi-dev
+  resourceVersion: "2345125446"
+  uid: 97141b99-d785-44ef-95f7-c0f2d38499b4
+spec:
+  ingress:
+  - from:
+    - podSelector: {}
+  podSelector: {}
+  policyTypes:
+  - Ingress
