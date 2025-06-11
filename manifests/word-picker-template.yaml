@@ -11,6 +11,13 @@ parameters:
   description: The number of replicas for the word picker deployment
   value: '1'
   required: false
+- name: WORDS
+  description: The words to be used in the word picker application, separated by whitespaces
+  value: |
+    first-word
+    second-word
+    third-word
+  required: false
 
 objects:
 - apiVersion: v1
@@ -20,10 +27,7 @@ objects:
     labels:
       app: ${APP_NAME}
   data:
-    custom_options.txt: |
-      first-word
-      second-word
-      third-word
+    custom_options.txt: ${WORDS}
 - apiVersion: apps/v1
   kind: Deployment
   metadata:
