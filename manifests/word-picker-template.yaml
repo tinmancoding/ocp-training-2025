@@ -7,6 +7,11 @@ parameters:
   description: The resource name used for the word piclker deployment, svc, and the apps label
   value: word-picker
   required: false
+- name: REPLICA_COUNT
+  description: The number of replicas for the word picker deployment
+  value: '1'
+  required: false
+
 objects:
 - apiVersion: v1
   kind: ConfigMap
@@ -26,7 +31,7 @@ objects:
     labels:
       app: ${APP_NAME}
   spec:
-    replicas: 1
+    replicas: ${{REPLICA_COUNT}}
     selector:
       matchLabels:
         app: ${APP_NAME}
