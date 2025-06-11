@@ -18,6 +18,10 @@ parameters:
     second-word
     third-word
   required: false
+- name: IMAGE
+  description: The image to use for the word picker deployment
+  value: tinmancoding/word-picker:v2025.2
+  required: false
 
 objects:
 - apiVersion: v1
@@ -46,7 +50,7 @@ objects:
       spec:
         containers:
         - name: word-picker
-          image: tinmancoding/word-picker:v2025.2
+          image: ${IMAGE}
           imagePullPolicy: Always
           ports:
           - containerPort: 5000
