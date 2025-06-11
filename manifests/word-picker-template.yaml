@@ -11,9 +11,9 @@ objects:
 - apiVersion: v1
   kind: ConfigMap
   metadata:
-    name: word-picker-options
+    name: ${APP_NAME}
     labels:
-      app: word-picker
+      app: ${APP_NAME}
   data:
     custom_options.txt: |
       first-word
@@ -22,18 +22,18 @@ objects:
 - apiVersion: apps/v1
   kind: Deployment
   metadata:
-    name: word-picker
+    name: ${APP_NAME}
     labels:
-      app: word-picker
+      app: ${APP_NAME}
   spec:
     replicas: 1
     selector:
       matchLabels:
-        app: word-picker
+        app: ${APP_NAME}
     template:
       metadata:
         labels:
-          app: word-picker
+          app: ${APP_NAME}
       spec:
         containers:
         - name: word-picker
@@ -50,4 +50,4 @@ objects:
         volumes:
         - name: options-config-configmap
           configMap:
-            name: word-picker-options
+            name: ${APP_NAME}
