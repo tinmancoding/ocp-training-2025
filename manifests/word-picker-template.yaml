@@ -51,3 +51,20 @@ objects:
         - name: options-config-configmap
           configMap:
             name: ${APP_NAME}
+
+- apiVersion: v1
+  kind: Service
+  metadata:
+    labels:
+      app: ${APP_NAME}
+    name: ${APP_NAME}
+  spec:
+    internalTrafficPolicy: Cluster
+    ports:
+    - port: 5000
+      protocol: TCP
+      targetPort: 5000
+    selector:
+      app: ${APP_NAME}
+    sessionAffinity: None
+    type: ClusterIP
